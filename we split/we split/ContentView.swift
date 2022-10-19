@@ -8,36 +8,47 @@
 import SwiftUI
 
 struct ContentView: View {
-		@State private var count = 0
-		@State private var name = ""
-		@State private var student = "adam"
-		@State private var subject = "math"
-		@State private var checkAmount = 0.0
+
+		@State private var checkAmount = 0.0
 		@State private var numberOfPeople = 2
-		let studentArray = ["adam", "john", "peter"]
-		let subjects = ["math", "science", "history"]
+		@State private var tipPercentage = 15
+		@State private var tipPercentages = [15, 20, 30, 40]
 
 		var body: some View {
 				NavigationView {
-						Form {
-								Section{
-										TextField("amount", value: $checkAmount, format:
-														.currency(code: Locale.current.currencyCode ?? ("USD")))
-										.keyboardType(.decimalPad)
+						Section {
+								Form {
+										Section{
+												TextField("amount", value: $checkAmount, format:
+																.currency(code: Locale.current.currencyCode ?? ("USD")))
+												.keyboardType(.decimalPad)
 
-										Picker("number of people", selection: $numberOfPeople) {
-												ForEach(2..<10) {
-														Text("\($0)")
+												Picker("number of people", selection: $numberOfPeople) {
+														ForEach(2..<10) {
+																Text("\($0)")
+														}
 												}
 										}
+										Section {
+												Picker("Tip percentage", selection: $tipPercentage) {
+														ForEach(tipPercentages, id: \.self) {
+																Text($0, format: .percent)
+														}
+												}												.pickerStyle(.segmented)
 
-										TextField("amount", value: $checkAmount, format:
-														.currency(code: Locale.current.currencyCode ?? ("USD")))								}
-						}.navigationTitle("SwiftUI")
+										} header: {
+												Text("pick the tip percentage you want to leave")
+										}
+										Section {
+												TextField("check amount", value: $checkAmount, format:
+																.currency(code: Locale.current.currencyCode ?? ("USD")))
+										}
+								}
+								.navigationTitle("We split")
+						}
 				}
 		}
 }
-
 
 struct ContentView_Previews: PreviewProvider {
 		static var previews: some View {
