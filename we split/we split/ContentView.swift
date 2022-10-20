@@ -54,6 +54,8 @@ struct ContentView: View {
 								}
 								Section {
 										Text(totalPerPerson, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+								} header: {
+										Text("amount per person")
 								}
 						}
 						.navigationTitle("We split")
