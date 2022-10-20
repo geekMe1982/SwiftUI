@@ -52,6 +52,13 @@ struct ContentView: View {
 								} header: {
 										Text("pick the tip percentage you want to leave")
 								}
+								Section{
+										Text(checkAmount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+
+
+								} header: {
+										Text("Total amount of check")
+								}
 								Section {
 										Text(totalPerPerson, format: .currency(code: Locale.current.currencyCode ?? "USD"))
 								} header: {
