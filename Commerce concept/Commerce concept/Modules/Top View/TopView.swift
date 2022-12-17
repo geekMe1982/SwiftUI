@@ -17,17 +17,17 @@ struct TopView: View {
         VStack {
             ScrollView(.horizontal, showsIndicators: false){
                 LazyHGrid(rows: galleryItems, spacing: 23) {
-                    ForEach(items, id: \.self) { items in
+                    ForEach(items, id: \.self) { item in
                         VStack {
                             Button(action: {}) {
                                 HStack {
-                                    Image(items.image)
+                                    Image(item.image)
                                         .frame(width: 73, height: 73, alignment: .center)
                                         .foregroundColor(.white)
                                 }
                             }
                             .buttonStyle(MyButtonStyle())
-                            Text(items.image)
+                            Text(item.image)
                                 .foregroundColor(.white)
                         }
                     }
