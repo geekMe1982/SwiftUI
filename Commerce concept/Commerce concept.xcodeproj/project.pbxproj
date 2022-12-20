@@ -19,6 +19,7 @@
 		385F04AB293BBD76005139E9 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385F04AA293BBD76005139E9 /* TopView.swift */; };
 		385F04AD293BBF73005139E9 /* TopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385F04AC293BBF73005139E9 /* TopViewModel.swift */; };
 		388A00562940BC1A00929339 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388A00552940BC1900929339 /* BannerView.swift */; };
+		389DC442294F543C008C103E /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389DC441294F543C008C103E /* DropDown.swift */; };
 		38AC514E2947AFB700DB9339 /* SF-Pro-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 38AC514D2947AFB700DB9339 /* SF-Pro-Text-Heavy.otf */; };
 		38AC51512948D2A200DB9339 /* BestSellerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AC51502948D2A200DB9339 /* BestSellerView.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,7 @@
 		385F04AA293BBD76005139E9 /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
 		385F04AC293BBF73005139E9 /* TopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewModel.swift; sourceTree = "<group>"; };
 		388A00552940BC1900929339 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
+		389DC441294F543C008C103E /* DropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDown.swift; sourceTree = "<group>"; };
 		38AC514D2947AFB700DB9339 /* SF-Pro-Text-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Heavy.otf"; sourceTree = "<group>"; };
 		38AC51502948D2A200DB9339 /* BestSellerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestSellerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +115,7 @@
 		385F04A0293BA65B005139E9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				389DC440294F541F008C103E /* DropDown */,
 				38AC514F2948D28200DB9339 /* Best Seller */,
 				388A00542940BBF800929339 /* Banner View */,
 				385F04A6293BA97A005139E9 /* Home Store */,
@@ -153,6 +156,14 @@
 				388A00552940BC1900929339 /* BannerView.swift */,
 			);
 			path = "Banner View";
+			sourceTree = "<group>";
+		};
+		389DC440294F541F008C103E /* DropDown */ = {
+			isa = PBXGroup;
+			children = (
+				389DC441294F543C008C103E /* DropDown.swift */,
+			);
+			path = DropDown;
 			sourceTree = "<group>";
 		};
 		38AC514F2948D28200DB9339 /* Best Seller */ = {
@@ -245,6 +256,7 @@
 				385F04A8293BAD55005139E9 /* HomeStoreView.swift in Sources */,
 				381EF0A82945179E00B0BAFE /* DataModel.swift in Sources */,
 				38AC51512948D2A200DB9339 /* BestSellerView.swift in Sources */,
+				389DC442294F543C008C103E /* DropDown.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
