@@ -6,13 +6,16 @@
 //
 
 import Foundation
+import SwiftUI
+import Combine
+
 
 // MARK: - Store
 
 struct Store: Codable {
     let homeStore: [HomeStore]
     let bestSeller: [BestSeller]
-    
+
     enum CodingKeys: String, CodingKey {
         case homeStore = "home_store"
         case bestSeller = "best_seller"
@@ -27,7 +30,7 @@ struct BestSeller: Codable {
     let title: String
     let priceWithoutDiscount, discountPrice: Int
     let picture: String
-    
+
     enum CodingKeys: String, CodingKey {
         case id
         case isFavorites = "is_favorites"
@@ -45,7 +48,7 @@ struct HomeStore: Codable {
     let title, subtitle: String
     let picture: String
     let isBuy: Bool
-    
+
     enum CodingKeys: String, CodingKey {
         case id
         case isNew = "is_new"
@@ -54,18 +57,32 @@ struct HomeStore: Codable {
     }
 }
 
-class Api {
-    func getData(completion: @escaping ([BestSeller]) -> ()) {
-        
-        guard let url = URL(string: "https://run.mocky.io/v3/654bd15e-b121-49ba-a588-960956b15175") else {return}
-        
-        URLSession.shared.dataTask(with: url) { (data, _, _) in
-            let posts = try! JSONDecoder().decode([BestSeller].self, from: data!)
-            
-            DispatchQueue.main.async {
-                completion(posts)
-            }
-        }
-        .resume()
-    }
-}
+
+//class Api {
+//
+//    @State private var results = [HomeStore]()
+//
+//    func loadData() async {
+//
+//        let url = "https://run.mocky.io/v3/654bd15e-b121-49ba-a588-960956b15175"
+//
+//        guard let url = URL(string: url) else {
+//            print("invalid URL")
+//            return
+//        }
+//        do {
+//            let (data, _) = try await URLSession.shared.data(from: url)
+//
+//            if let decodedResponse = try? JSONDecoder().decode(Store.self, from: data){
+//                results = decodedResponse.homeStore
+//                print(results)
+//            }
+//
+//        } catch {
+//            print("invalid data")
+//
+//        }
+//
+//    }
+//
+//}
