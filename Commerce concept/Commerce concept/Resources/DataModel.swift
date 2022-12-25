@@ -6,13 +6,16 @@
 //
 
 import Foundation
+import SwiftUI
+import Combine
+
 
 // MARK: - Store
 
 struct Store: Codable {
     let homeStore: [HomeStore]
     let bestSeller: [BestSeller]
-    
+
     enum CodingKeys: String, CodingKey {
         case homeStore = "home_store"
         case bestSeller = "best_seller"
@@ -27,7 +30,7 @@ struct BestSeller: Codable {
     let title: String
     let priceWithoutDiscount, discountPrice: Int
     let picture: String
-    
+
     enum CodingKeys: String, CodingKey {
         case id
         case isFavorites = "is_favorites"
@@ -45,7 +48,7 @@ struct HomeStore: Codable {
     let title, subtitle: String
     let picture: String
     let isBuy: Bool
-    
+
     enum CodingKeys: String, CodingKey {
         case id
         case isNew = "is_new"
