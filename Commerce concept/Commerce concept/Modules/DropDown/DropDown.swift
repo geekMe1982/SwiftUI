@@ -15,18 +15,22 @@ struct DropDown: View {
         
         VStack(spacing: 30) {
             HStack {
+                Image(systemName: "lightbulb")
                 Text("Zihuatanejo, Gro")
                     .foregroundColor(.black)
                 Image(systemName: expand ? "chevron.up" : "chevron.down")
                     .resizable()
-                    .frame(width: 13, height: 11)
+                    .frame(width: 10, height: 10)
+                
             }.onTapGesture {
                 self.expand.toggle()
             }
             if expand {
+                Button(action: {}) {
+                    Text("Hello world")
+                }
             }
-        }
-        
+        }.padding(.top)
     }
 }
 
