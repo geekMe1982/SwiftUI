@@ -6,8 +6,6 @@
 //
 
 import Foundation
-import SwiftUI
-
 
 struct TopViewModel: Identifiable, Hashable {
     var id = UUID()
