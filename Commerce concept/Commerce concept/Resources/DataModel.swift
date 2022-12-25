@@ -60,10 +60,10 @@ class Api {
         guard let url = URL(string: "https://run.mocky.io/v3/654bd15e-b121-49ba-a588-960956b15175") else {return}
         
         URLSession.shared.dataTask(with: url) { (data, _, _) in
-            let posts = try! JSONDecoder().decode([BestSeller].self, from: data!)
+            let decodedData = try! JSONDecoder().decode([BestSeller].self, from: data!)
             
             DispatchQueue.main.async {
-                completion(posts)
+                completion(decodedData)
             }
         }
         .resume()

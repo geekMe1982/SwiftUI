@@ -19,6 +19,7 @@
 		385F04AB293BBD76005139E9 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385F04AA293BBD76005139E9 /* TopView.swift */; };
 		385F04AD293BBF73005139E9 /* TopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385F04AC293BBF73005139E9 /* TopViewModel.swift */; };
 		388A00562940BC1A00929339 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388A00552940BC1900929339 /* BannerView.swift */; };
+		388B34CB29521A0600A0608A /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388B34CA29521A0600A0608A /* Filter.swift */; };
 		389DC442294F543C008C103E /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389DC441294F543C008C103E /* DropDown.swift */; };
 		38AC514E2947AFB700DB9339 /* SF-Pro-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 38AC514D2947AFB700DB9339 /* SF-Pro-Text-Heavy.otf */; };
 		38AC51512948D2A200DB9339 /* BestSellerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AC51502948D2A200DB9339 /* BestSellerView.swift */; };
@@ -39,6 +40,7 @@
 		385F04AA293BBD76005139E9 /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
 		385F04AC293BBF73005139E9 /* TopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewModel.swift; sourceTree = "<group>"; };
 		388A00552940BC1900929339 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
+		388B34CA29521A0600A0608A /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		389DC441294F543C008C103E /* DropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDown.swift; sourceTree = "<group>"; };
 		38AC514D2947AFB700DB9339 /* SF-Pro-Text-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Heavy.otf"; sourceTree = "<group>"; };
 		38AC51502948D2A200DB9339 /* BestSellerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestSellerView.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 		385F04A0293BA65B005139E9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				388B34C9295219DD00A0608A /* Filter */,
 				389DC440294F541F008C103E /* DropDown */,
 				38AC514F2948D28200DB9339 /* Best Seller */,
 				388A00542940BBF800929339 /* Banner View */,
@@ -158,6 +161,14 @@
 			path = "Banner View";
 			sourceTree = "<group>";
 		};
+		388B34C9295219DD00A0608A /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				388B34CA29521A0600A0608A /* Filter.swift */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
 		389DC440294F541F008C103E /* DropDown */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +201,8 @@
 			dependencies = (
 			);
 			name = "Commerce concept";
+			packageProductDependencies = (
+			);
 			productName = "Commerce concept";
 			productReference = 385F048A293B9ADA005139E9 /* Commerce concept.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +231,8 @@
 				Base,
 			);
 			mainGroup = 385F0481293B9ADA005139E9;
+			packageReferences = (
+			);
 			productRefGroup = 385F048B293B9ADA005139E9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -249,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				385F04A5293BA7EE005139E9 /* SplashView.swift in Sources */,
+				388B34CB29521A0600A0608A /* Filter.swift in Sources */,
 				385F048E293B9ADA005139E9 /* Commerce_conceptApp.swift in Sources */,
 				388A00562940BC1A00929339 /* BannerView.swift in Sources */,
 				385F04AD293BBF73005139E9 /* TopViewModel.swift in Sources */,

@@ -10,6 +10,8 @@ import SwiftUI
 struct HomeStoreView: View {
     
     @State var testok = ""
+    @State private var isShowingPopover = false
+
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -78,14 +80,22 @@ struct HomeStoreView: View {
                     BestSellerView()
                     Spacer()
                 }
-                .padding(.top)
-                .navigationBarHidden(true)
-                .toolbar {
+                .toolbar(content: {
                     ToolbarItem(placement: .principal) {
+                        DropDown()
                     }
-                }
-                .background(.clear)
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button(action: {
+                            isShowingPopover.toggle()
+                        }) {
+                            Image(systemName: "line.3.horizontal.decrease.circle")
+                        }.sheet(isPresented: $isShowingPopover) {
+                                Filter()
+                        }
+                    }
+                })
             }
+            
             GeometryReader { geometry in
                 ZStack {
                     Rectangle()
@@ -104,10 +114,10 @@ struct HomeStoreView: View {
             }
         }
     }
-    
-    struct HomeStoreView_Previews: PreviewProvider {
-        static var previews: some View {
-            HomeStoreView()
-        }
+}
+
+struct HomeStoreView_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeStoreView()
     }
 }

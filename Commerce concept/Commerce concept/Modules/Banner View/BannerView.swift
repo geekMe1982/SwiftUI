@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct BannerView: View {
     
     @State private var results = [HomeStore]()
@@ -60,8 +59,6 @@ struct BannerView: View {
     }
     
     func loadData() async {
-        
-        
         guard let url = URL(string: "https://run.mocky.io/v3/654bd15e-b121-49ba-a588-960956b15175") else {
             print("invalid URL")
             return
@@ -76,13 +73,12 @@ struct BannerView: View {
             print("invalid data")
         }
     }
-    
-    struct BannerView_Previews: PreviewProvider {
-        static var previews: some View {
-            BannerView()
-        }
+}
+
+struct BannerView_Previews: PreviewProvider {
+    static var previews: some View {
+        BannerView()
     }
-    
 }
 
 extension Image {
