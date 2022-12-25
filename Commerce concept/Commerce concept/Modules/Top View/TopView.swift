@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TopView: View {
-        
+    
     let galleryItems = [GridItem(.flexible(minimum: 500))]
     
     private let items = TopViewModel.topViewItems
@@ -38,18 +38,17 @@ struct TopView: View {
     }
     
     struct MyButtonStyle: ButtonStyle {
-
-      func makeBody(configuration: Self.Configuration) -> some View {
-        configuration.label
-          .background(configuration.isPressed ? Color.red : Color.white)
-          .cornerRadius(50)
-          .shadow(radius: 7)
-      }
-    }
-    
-    struct TopView_Previews: PreviewProvider {
-        static var previews: some View {
-            TopView()
+        func makeBody(configuration: Self.Configuration) -> some View {
+            configuration.label
+                .background(configuration.isPressed ? Color.red : Color.white)
+                .cornerRadius(50)
+                .shadow(radius: 7)
         }
+    }
+}
+
+struct TopView_Previews: PreviewProvider {
+    static var previews: some View {
+        TopView()
     }
 }
